@@ -1,9 +1,16 @@
 package net.spring.abdul.student.studentservice.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class StudentDetailsDto {
 	
+	@NotNull
 	private int studentId;
+	@NotBlank
 	private String studentName;
+	@Max(150)
 	private int studentAge;
 	
 	public StudentDetailsDto() {
